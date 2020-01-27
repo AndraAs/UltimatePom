@@ -1,0 +1,27 @@
+# Created at 2020-01-26T18:09:13.475
+Picked up JAVA_TOOL_OPTIONS: -agentlib:jvmhook
+
+# Created at 2020-01-26T18:09:13.477
+Picked up _JAVA_OPTIONS: -Xrunjvmhook -Xbootclasspath/a:"C:\Program Files (x86)\Micro Focus\Unified Functional Testing\bin\java_shared\classes\jasmine.jar"
+
+# Created at 2020-01-26T18:09:15.412
+WARNING: An illegal reflective access operation has occurred
+
+# Created at 2020-01-26T18:09:15.413
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/C:/Users/Andra/.m2/repository/com/google/inject/guice/4.2.2/guice-4.2.2.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+
+# Created at 2020-01-26T18:09:15.418
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+
+# Created at 2020-01-26T18:09:15.419
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+
+# Created at 2020-01-26T18:09:15.420
+WARNING: All illegal access operations will be denied in a future release
+
+# Created at 2020-01-26T18:09:17.146
+Picked up JAVA_TOOL_OPTIONS: -agentlib:jvmhook
+
+# Created at 2020-01-26T18:09:17.147
+Picked up _JAVA_OPTIONS: 
+
