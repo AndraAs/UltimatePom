@@ -12,11 +12,11 @@ public class DemoWebShopTets {
 	@Managed
 	WebDriver driver;
 	ApparelAndShoesPage apparel;
-//	HomePageNavLinks navLink;
+	HomePageNavLinks navLink;
 	
 	@Test
 	public void testCase1() throws InterruptedException {
-//		navLink.selectCategory();
+		navLink.selectCategory();
 		Thread.sleep(4000);
 		apparel.serenityPickProd();
 		Thread.sleep(3000);

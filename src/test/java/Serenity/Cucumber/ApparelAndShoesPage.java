@@ -11,25 +11,26 @@ import java.util.List;
 import net.serenitybdd.core.pages.PageObject;
 import net.thucydides.core.annotations.DefaultUrl;
 
-@DefaultUrl("/apparel-shoes")
+//@DefaultUrl("/apparel-shoes")
 public class ApparelAndShoesPage extends PageObject {
-	
-	String[] productItems = {"1.00"};
+
+	String[] productItems = { "1.00" };
+
 	public void serenityPickProd() throws InterruptedException {
-		int i=0;
-		open();
+		int i = 0;
+//		open();
 		List<WebElement> linkBtn = getDriver().findElements(By.cssSelector("span.price.actual-price"));
-		for (int j=0;j<linkBtn.size();j++) {
-		String numeProd= linkBtn.get(j).getText();
-		System.out.println(numeProd);
-		List prodItenL = Arrays.asList(productItems);
-				if(prodItenL.contains(numeProd)) {
-					i++;
-					Thread.sleep(4000);
+		for (int j = 0; j < linkBtn.size(); j++) {
+			String numeProd = linkBtn.get(j).getText();
+			System.out.println(numeProd);
+			List prodItenL = Arrays.asList(productItems);
+			if (prodItenL.contains(numeProd)) {
+				i++;
+				Thread.sleep(4000);
 				getDriver().findElements(By.cssSelector("input[value='Add to cart']")).get(j).click();
-Thread.sleep(5000);
-				}
-//				i++;
-		 }
+				Thread.sleep(5000);
+			}
+//				
+		}
 	}
 }
