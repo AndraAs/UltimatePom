@@ -6,18 +6,18 @@ import org.openqa.selenium.WebDriver;
 
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
-import net.thucydides.core.annotations.Title;
 
 @RunWith(SerenityRunner.class)
-public class MyFirstTest {
+public class LocatorExamplesTest {
 	@Managed
 	WebDriver driver;
-	@Title("This is my first serenity test")
+	
+	LocatorExamplePage page;
+	
 	@Test
-	public void navToGoogle() {
-		
-		driver.navigate().to("http://demowebshop.tricentis.com/");
-
+	public void tc1() throws InterruptedException {
+		page.serenity_AllLinks();
+		Thread.sleep(3000);
 	}
 
 }

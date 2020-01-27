@@ -1,4 +1,4 @@
-package Serenity.Cucumber;
+package Serenity.Cucumber.Tables;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -6,18 +6,17 @@ import org.openqa.selenium.WebDriver;
 
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
-import net.thucydides.core.annotations.Title;
 
 @RunWith(SerenityRunner.class)
-public class MyFirstTest {
+public class TableTest {
+	
 	@Managed
 	WebDriver driver;
-	@Title("This is my first serenity test")
+	
+	TablePage tablepg;
+
 	@Test
-	public void navToGoogle() {
-		
-		driver.navigate().to("http://demowebshop.tricentis.com/");
-
+	public void tc1() {
+		tablepg.extractFilteredRowsFromTable();
 	}
-
 }

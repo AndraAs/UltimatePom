@@ -6,18 +6,17 @@ import org.openqa.selenium.WebDriver;
 
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
-import net.thucydides.core.annotations.Title;
 
 @RunWith(SerenityRunner.class)
-public class MyFirstTest {
+public class DemoWebShopTets {
 	@Managed
 	WebDriver driver;
-	@Title("This is my first serenity test")
+	HomePageNavLinks navLink;
+	
 	@Test
-	public void navToGoogle() {
-		
-		driver.navigate().to("http://demowebshop.tricentis.com/");
-
+	public void testCase1() throws InterruptedException {
+		navLink.selectCategory();
+		Thread.sleep(3000);
 	}
 
 }
