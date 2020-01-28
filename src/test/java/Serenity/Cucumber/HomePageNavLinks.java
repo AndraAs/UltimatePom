@@ -14,7 +14,7 @@ super();
 	}
 	
 	public void selectCategory() {
-		open();
+//		open();
 		WebElementFacade link=$("//ul[@class='top-menu']/li[4]/a");
 		
 
