@@ -22,8 +22,8 @@ public class DemoWebShopTest {
 	@Title("Shopping Test")
 	public void navToRegisterPg() throws InterruptedException {
 		webShopSteps.registerUser();
-		webShopSteps.registerUserFields();
-		
+		webShopSteps.fillRegisterForm("andraAs", "stalus", "AsT@gmail.com", "testat1234", "testat1234");
+		webShopSteps.registerClickBtn();
 		webShopSteps.clickContinue();
 		webShopSteps.navToApparelPg();
 		Thread.sleep(4000);

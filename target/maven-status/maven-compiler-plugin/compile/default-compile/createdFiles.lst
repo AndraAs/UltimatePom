@@ -1,1 +1,14 @@
+com\demoWebShop\pages\RegisterPageDemoWeb.class
+com\jpetstore\pages\BasePage$1.class
+com\jpetstore\pages\ProductsPage.class
+com\jpetstore\pages\DashBoardPage.class
+com\demoWebShop\pages\ProductsPageWebShop.class
 Serenity\Cucumber\App.class
+com\demoWebShop\pages\BasePageWebShop.class
+com\demoWebShop\pages\SelectingProducts.class
+com\jpetstore\utils\PetCategories.class
+com\demoWebShop\pages\RegisterPageDemoWebFields.class
+com\jpetstore\pages\HelpPage.class
+com\jpetstore\pages\LoginPage.class
+com\jpetstore\pages\AccountsPage.class
+com\jpetstore\pages\BasePage.class

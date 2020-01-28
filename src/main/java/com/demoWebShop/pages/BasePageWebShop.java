@@ -1,5 +1,11 @@
 package com.demoWebShop.pages;
 
+import java.util.Arrays;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
 import net.serenitybdd.core.pages.PageObject;
 
 public class BasePageWebShop extends PageObject {
@@ -21,16 +27,21 @@ public class BasePageWebShop extends PageObject {
 		return this.switchToPage(RegisterPageDemoWeb.class);
 	}
 
-	public RegisterPageDemoWebFields registerUserFields() {
-
-		waitFor(First_Name_Input).$(First_Name_Input).sendKeys("andratest75");
-		waitFor(Last_Name_Input).$(Last_Name_Input).type("testing75");
-		waitFor(Email_Input).$(Email_Input).typeAndTab("andratest75.testing@gmail.com");
-		waitFor(Password_Input).$(Password_Input).typeAndTab("test1234456567");
-		waitFor(Confirm_Password_Input).$(Confirm_Password_Input).type("test1234456567");
+//	public RegisterPageDemoWebFields registerUserFields() {
+//
+//		waitFor(First_Name_Input).$(First_Name_Input).sendKeys("andratest72");
+//		waitFor(Last_Name_Input).$(Last_Name_Input).type("testing72");
+//		waitFor(Email_Input).$(Email_Input).typeAndTab("andratest72.testing@gmail.com");
+//		waitFor(Password_Input).$(Password_Input).typeAndTab("test172");
+//		waitFor(Confirm_Password_Input).$(Confirm_Password_Input).type("test172");
+//		waitFor(RegisterBtn_Submit).$(RegisterBtn_Submit).click();
+//		return this.switchToPage(RegisterPageDemoWebFields.class);
+//
+//	}
+	public RegisterPageDemoWeb registerClickBtn() {
 		waitFor(RegisterBtn_Submit).$(RegisterBtn_Submit).click();
-		return this.switchToPage(RegisterPageDemoWebFields.class);
-
+		return this.switchToPage(RegisterPageDemoWeb.class);
+		
 	}
 
 	public RegisterPageDemoWeb clickContinue() {
@@ -39,9 +50,30 @@ public class BasePageWebShop extends PageObject {
 	}
 
 	public ProductsPageWebShop navToApparelPg() {
-		waitFor(ApparelShoes_Link).$(ApparelShoes_Link);
+		waitFor(ApparelShoes_Link).$(ApparelShoes_Link).click();
 
 		return this.switchToPage(ProductsPageWebShop.class);
+	}
+	
+//	String[] productItems = { "1.00" };
+//
+//	public ProductsPageWebShop serenityPickProd() {
+//		int i = 0;
+////		open();
+//		List<WebElement> linkBtn = getDriver().findElements(By.cssSelector("span.price.actual-price"));
+//		for (int j = 0; j < linkBtn.size(); j++) {
+//			String numeProd = linkBtn.get(j).getText();
+//			System.out.println(numeProd);
+//			List prodItenL = Arrays.asList(productItems);
+//			if (prodItenL.contains(numeProd)) {
+//				i++;
+//				
+//				getDriver().findElements(By.cssSelector("input[value='Add to cart']")).get(j).click();
+//				
+//			}
+////				
+//		}
+//		return this.switchToPage(ProductsPageWebShop.class);
 	}
 	
 //	public SelectingProducts serenityPickProd() {
@@ -49,4 +81,4 @@ public class BasePageWebShop extends PageObject {
 //		return this.switchToPage(SelectingProducts.class);
 //	}
 
-}
+
