@@ -27,9 +27,9 @@ public class RegisterPage extends PageObject {
 	public void registerProcess() {
 		open();
 		regBtn.click();
-		firstName.sendKeys("andra");
-		lastName.sendKeys("test");
-		emailAdd.sendKeys("andra.test@gmail.com");
+		firstName.sendKeys("andra2");
+		lastName.sendKeys("test2");
+		emailAdd.sendKeys("andra2.test@gmail.com");
 		passAdd.typeAndTab("test123");
 		confPassAdd.typeAndEnter("test123");
 		registerBtn.click();
