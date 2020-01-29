@@ -1,4 +1,4 @@
-package com.DemoWebShop.steps;
+package com.DemoWebShop.Cucumber.steps.Serenity;
 
 import com.demoWebShop.pages.BasePageWebShop;
 import com.demoWebShop.pages.ProductsPageWebShop;
