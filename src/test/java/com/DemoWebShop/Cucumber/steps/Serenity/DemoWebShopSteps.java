@@ -17,6 +17,7 @@ public class DemoWebShopSteps extends ScenarioSteps {
 //Registering new user
 	@Step("Register new user")
 	public RegisterPageDemoWeb registerUser() {
+		
 		return baseWebpg.registerUser();
 	}
 
