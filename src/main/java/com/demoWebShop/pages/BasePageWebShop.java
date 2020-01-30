@@ -10,12 +10,7 @@ import net.serenitybdd.core.pages.PageObject;
 
 public class BasePageWebShop extends PageObject {
 	private static final String Register_Link = "//a[@href='/register']";
-	private static final String First_Name_Input = "//input[@id='FirstName']";
-	private static final String Last_Name_Input = "//input[@id='LastName']";
-	private static final String Email_Input = "//input[@id='Email']";
-	private static final String Password_Input = "//input[@id='Password']";
-	private static final String Confirm_Password_Input = "//input[@id='ConfirmPassword']";
-	private static final String RegisterBtn_Submit = "//input[@id='register-button']";
+    private static final String RegisterBtn_Submit = "//input[@id='register-button']";
 	private static final String Button_Continue = "//input[@value='Continue']";
 	private static final String ApparelShoes_Link = "//a[@href='/apparel-shoes']";
 	private static final String ShoppinCart_Link ="//a[@href='/cart']";
