@@ -4,5 +4,4 @@ com\demoWebShop\pages\ShoppingCartPage.class
 com\demoWebShop\pages\RegisterPageDemoWebFields.class
 com\demoWebShop\pages\CheckOutPage.class
 com\demoWebShop\pages\ProductsPageWebShop.class
-Serenity\Cucumber\App.class
 com\demoWebShop\pages\BasePageWebShop.class

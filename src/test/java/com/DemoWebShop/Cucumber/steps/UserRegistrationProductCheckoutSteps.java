@@ -7,6 +7,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import net.serenitybdd.core.Serenity;
 import net.thucydides.core.annotations.Steps;
 
 
@@ -23,8 +24,11 @@ public class UserRegistrationProductCheckoutSteps {
 	public void User_fills_in_Registration_Form() {
 		Faker faker = new Faker();
 		String FirstName = faker.name().firstName();
+		Serenity.setSessionVariable("firstName").to(FirstName);
 		String LastName = faker.name().lastName();
+		Serenity.setSessionVariable("lastName").to(LastName);
 		String Email = faker.internet().emailAddress();
+		Serenity.setSessionVariable("email").to(Email);
 		String Password = faker.internet().password();
 		String ConfirmPassw = Password;
 		
@@ -58,6 +62,7 @@ public class UserRegistrationProductCheckoutSteps {
 	public void User_is_redirected_to_Shopping_Cart_Page_and_can_select_Country_for_Checkout() {
 		
 		String country = "Romania";
+		Serenity.setSessionVariable("country").to(country);
 		shopper.selectCountryDropDown(country);
 	}
 	
@@ -72,11 +77,11 @@ public class UserRegistrationProductCheckoutSteps {
 	}
 	@Then ("User fills in Billing Address")
 	public void User_fills_in_Billing_Address() {
-		String CountryBill="Romania";
+		String CountryBill=Serenity.sessionVariableCalled("country");
 		Faker faker = new Faker();
-		String FirstNameBill = faker.name().firstName();
-		String LastNameBill = faker.name().lastName();
-		String EmailBill= faker.internet().emailAddress();
+		String FirstNameBill= Serenity.sessionVariableCalled("firstName");
+		String LastNameBill= Serenity.sessionVariableCalled("lastName"); 
+        String EmailBill=Serenity.sessionVariableCalled("email");
 		String CityBill= faker.address().city();
 		String Adress1Bill= faker.address().streetAddress();
 		String ZipBill= faker.address().zipCode();
