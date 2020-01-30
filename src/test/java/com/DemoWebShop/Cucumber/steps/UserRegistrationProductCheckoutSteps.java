@@ -70,5 +70,43 @@ public class UserRegistrationProductCheckoutSteps {
 	public void And_User_clicks_on_CheckOut_button() {
 		shopper.clickOnCheckOutBtn();
 	}
+	@Then ("User fills in Billing Address")
+	public void User_fills_in_Billing_Address() {
+		String CountryBill="Romania";
+		Faker faker = new Faker();
+		String FirstNameBill = faker.name().firstName();
+		String LastNameBill = faker.name().lastName();
+		String EmailBill= faker.internet().emailAddress();
+		String CityBill= faker.address().city();
+		String Adress1Bill= faker.address().streetAddress();
+		String ZipBill= faker.address().zipCode();
+		String PhoneNumBill= faker.phoneNumber().phoneNumber();
+		shopper.fillBillingAddress(FirstNameBill, LastNameBill, EmailBill, CountryBill, CityBill, Adress1Bill, ZipBill, PhoneNumBill);
+		
+		}
+	@And ("User fills Shipping Address and clicks continue")
+	public void User_fills_Shipping_Address_and_clicks_continue() {
+		 shopper.fillShippingAddress();
+	}
+	@And ("User fills Shipping Method")
+	public void User_fills_Shipping_Method() {
+		shopper.fillShippingMethod();
+	}
+	@And ("User fills Payment method")
+	public void User_fills_Payment_method() {
+		shopper.fillPaymentMethod();
+	}
+	@And ("User fills Payment Information")
+	public void User_fills_Payment_Information() {
+		shopper.fillPaymentInfo();
+	}
+	@Then ("User confirms order")
+	public void User_confirms_order() {
+		shopper.confirmOrder();
+	}
+	@And ("User clicks continue to confirm successfull order")
+	public void User_clicks_continue_to_confirm_successfull_order() {
+		shopper.orderSuccesContinue();
+	}
 
 }

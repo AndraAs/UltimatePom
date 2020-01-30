@@ -1,6 +1,7 @@
 package com.DemoWebShop.Cucumber.steps.Serenity;
 
 import com.demoWebShop.pages.BasePageWebShop;
+import com.demoWebShop.pages.CheckOutPage;
 import com.demoWebShop.pages.ProductsPageWebShop;
 import com.demoWebShop.pages.RegisterPageDemoWeb;
 import com.demoWebShop.pages.RegisterPageDemoWebFields;
@@ -15,6 +16,7 @@ public class DemoWebShopSteps extends ScenarioSteps {
 	SelectingProducts selectProd;
 	RegisterPageDemoWebFields registerFields;
 	ShoppingCartPage shoppingCartPage;
+	CheckOutPage checkOutPage;
 
 //Registering new user
 	@Step("Register new user")
@@ -23,7 +25,7 @@ public class DemoWebShopSteps extends ScenarioSteps {
 		return baseWebpg.registerUser();
 	}
 
-	@Step("Filling in Registration Form with FirstName: {0}, LastName: {1}, Email: {3}, Password: {4}, ConfirmPassw: {5}")
+	@Step("Filling in Registration Form with FirstName: {0}, LastName: {1}, Email: {2}, Password: {3}, ConfirmPassw: {4}")
 	public RegisterPageDemoWebFields fillRegisterForm(String FirstName, String LastName, String Email, String Password,
 			String ConfirmPassw) {
 		return registerFields.fillRegisterForm(FirstName, LastName, Email, Password, ConfirmPassw);
@@ -44,7 +46,6 @@ public class DemoWebShopSteps extends ScenarioSteps {
 		return baseWebpg.navToApparelPg();
 	}
 
-//Selecting the products
 	@Step("select produse")
 	public ProductsPageWebShop serenityPickProd() {
 		return selectProd.serenityPickProd();
@@ -69,4 +70,43 @@ public class DemoWebShopSteps extends ScenarioSteps {
 	public ShoppingCartPage clickOnCheckOutBtn() {
 		return shoppingCartPage.clickOnCheckOutBtn();
 	}
+
+    @Step("Fill in Billing Address with FirstNameBill: {0}, LastNameBill: {1}, EmailBill: {3}, CountryBill: {4}, CityBill: {5}, Adress1Bill: {6}, ZipBill: {7}, PhoneNumBill: {8}")
+    public CheckOutPage fillBillingAddress(String FirstNameBill,
+		                               String LastNameBill,
+		                               String EmailBill,
+		                               String CountryBill,
+		                               String CityBill, 
+		                               String Adress1Bill, 
+		                               String ZipBill, 
+		                               String PhoneNumBill) {
+	    return checkOutPage.fillBillingAddress(FirstNameBill, LastNameBill, EmailBill, CountryBill, CityBill, Adress1Bill, ZipBill, PhoneNumBill);
 }
+    @Step("Fill Shipping Adress")
+    public CheckOutPage fillShippingAddress() {
+    	return checkOutPage.fillShippingAddress();
+    }
+    @Step("Fill Shipping Method")
+    public CheckOutPage fillShippingMethod() {
+    	return checkOutPage.fillShippingMethod();
+    }
+    @Step("Fill payment method")
+    public CheckOutPage fillPaymentMethod() {
+    	return checkOutPage.fillPaymentMethod();
+    }
+    @Step("Fill Payment Information")
+    public CheckOutPage fillPaymentInfo() {
+    	return checkOutPage.fillPaymentInfo();
+    }
+    @Step("Confirm Order")
+    public CheckOutPage confirmOrder() {
+    	return checkOutPage.confirmOrder();
+    	
+    }
+    @Step("Confirm Order Succesfull")
+    public ProductsPageWebShop orderSuccesContinue() {
+    	return checkOutPage.orderSuccesContinue();
+    	
+    }
+}
+

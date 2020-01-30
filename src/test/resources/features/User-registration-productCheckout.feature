@@ -12,3 +12,10 @@ Scenario: Home page default registration
 	Then User is redirected to Shopping Cart Page and can select Country for Checkout
 	And User agrees to terms of sercive
 	And User clicks on CheckOut button
+	Then User fills in Billing Address
+	And User fills Shipping Address and clicks continue
+	And User fills Shipping Method
+	And User fills Payment method
+	And User fills Payment Information
+	Then User confirms order
+	And User clicks continue to confirm successfull order
