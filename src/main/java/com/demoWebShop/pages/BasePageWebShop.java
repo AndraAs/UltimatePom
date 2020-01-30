@@ -19,6 +19,7 @@ public class BasePageWebShop extends PageObject {
 	private static final String Button_Continue = "//input[@value='Continue']";
 	private static final String ApparelShoes_Link = "//a[@href='/apparel-shoes']";
 	private static final String ShoppinCart_Link ="//a[@href='/cart']";
+	private static final String LogOut_Link="//a[@href='/logout']";
 	
 
 	public RegisterPageDemoWeb registerUser() {
@@ -50,7 +51,11 @@ public class BasePageWebShop extends PageObject {
 		waitFor(ShoppinCart_Link).$(ShoppinCart_Link).click();
 		return this.switchToPage(ProductsPageWebShop.class);
 	}
-
+	public ProductsPageWebShop logOut() {
+		waitFor(LogOut_Link).$(LogOut_Link).click();
+		return this.switchToPage(ProductsPageWebShop.class);
+	}
+	
 	}
 	
 

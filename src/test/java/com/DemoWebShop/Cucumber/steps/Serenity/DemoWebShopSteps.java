@@ -108,5 +108,10 @@ public class DemoWebShopSteps extends ScenarioSteps {
     	return checkOutPage.orderSuccesContinue();
     	
     }
+    
+    @Step("Log Out")
+    public ProductsPageWebShop logOut() {
+    	return baseWebpg.logOut();
+    }
 }
 

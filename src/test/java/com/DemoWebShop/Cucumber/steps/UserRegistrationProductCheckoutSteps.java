@@ -20,19 +20,9 @@ public class UserRegistrationProductCheckoutSteps {
 		shopper.registerUser();
 	}
 	
-	@And ("User fills in Registration Form")
-	public void User_fills_in_Registration_Form() {
-		Faker faker = new Faker();
-		String FirstName = faker.name().firstName();
-		Serenity.setSessionVariable("firstName").to(FirstName);
-		String LastName = faker.name().lastName();
-		Serenity.setSessionVariable("lastName").to(LastName);
-		String Email = faker.internet().emailAddress();
-		Serenity.setSessionVariable("email").to(Email);
-		String Password = faker.internet().password();
-		String ConfirmPassw = Password;
-		
-		
+	@And("^User fills in Registration Form with thse details (.+),(.+),(.+),(.+),(.+)$")
+	public void User_fills_in_Registration_Form(String FirstName, String LastName, String Email, String Password, String ConfirmPassw) {
+	
 		shopper.fillRegisterForm(FirstName, LastName, Email, Password, ConfirmPassw);
 	}
 	
@@ -77,11 +67,11 @@ public class UserRegistrationProductCheckoutSteps {
 	}
 	@Then ("User fills in Billing Address")
 	public void User_fills_in_Billing_Address() {
-		String CountryBill=Serenity.sessionVariableCalled("country");
+		String CountryBill="Romania";
 		Faker faker = new Faker();
-		String FirstNameBill= Serenity.sessionVariableCalled("firstName");
-		String LastNameBill= Serenity.sessionVariableCalled("lastName"); 
-        String EmailBill=Serenity.sessionVariableCalled("email");
+		String FirstNameBill= faker.name().firstName();
+		String LastNameBill= faker.name().lastName(); 
+        String EmailBill=faker.internet().emailAddress();
 		String CityBill= faker.address().city();
 		String Adress1Bill= faker.address().streetAddress();
 		String ZipBill= faker.address().zipCode();
@@ -112,6 +102,10 @@ public class UserRegistrationProductCheckoutSteps {
 	@And ("User clicks continue to confirm successfull order")
 	public void User_clicks_continue_to_confirm_successfull_order() {
 		shopper.orderSuccesContinue();
+	}
+	@And ("User logs out")
+	public void User_logs_out() {
+		shopper.logOut();
 	}
 
 }
