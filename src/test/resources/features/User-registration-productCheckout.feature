@@ -23,6 +23,6 @@ Scenario Outline: Home page default registration
 	
 	Examples:
 	|FirstName|LastName |Email              |Password |ConfirmPass|
-	|tesh5n0d0|ultimate3|tesh5n0d0@gmail.com|tesh5n0d0|tesh5n0d0  |
-	|tesr0n0d8|final3   |tesr0n0d8@gmail.com|tesr0n0d8|tesr0n0d8  |
+	|tesi6n1d1|ultimate4|tesi6n1d1@gmail.com|tesi6n1d1|tesi6n1d1  |
+	|tesj1n1d9|final4   |tesj1n1d9@gmail.com|tesj1n1d9|tesj1n1d9  |
 	
