@@ -22,7 +22,7 @@ Scenario Outline: Home page default registration
 	And User logs out
 	
 	Examples:
-	|FirstName|LastName |Email              |Password |ConfirmPass|
-	|tesl8n3d3|ultimate4|tesl8n3d3@gmail.com|tesl8n3d3|tesl8n3d3  |
-	|tesm4n4d5|final4   |tesm4n4d5d8@gmail.com|tesm4n4d5|tesm4n4d5  |
+	|FirstName|LastName |Email                |Password |ConfirmPass|
+	|tesm9n4d4|ultimate4|tesm9n4d4@gmail.com  |tesm9n4d4|tesm9n4d4  |
+	|tesn5n5d6|final4   |tesn5n5d6@gmail.com  |tesn5n5d6|tesn5n5d6  |
 	
