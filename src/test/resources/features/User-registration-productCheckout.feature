@@ -22,3 +22,7 @@ Scenario: Home page default registration
 	And User clicks continue to confirm successfull order 
 	And User logs out
 	
+<<<<<<< HEAD
+=======
+	
+>>>>>>> ec6545fb50a5b76008a270fec3f083bba3bc934c
