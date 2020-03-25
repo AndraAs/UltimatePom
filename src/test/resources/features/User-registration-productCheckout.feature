@@ -1,8 +1,9 @@
 Feature: DemoWebShop Register and Product CheckOut 
 
-Scenario Outline: Home page default registration 
+Scenario: Home page default registration 
 	Given User navigates to registration page 
-	And User fills in Registration Form with thse details <FirstName>,<LastName>,<Email>,<Password>,<ConfirmPass>
+	And User fills in Registration Form with thse details 
+
 	
 	And User clicks on Register button to complete registration 
 	Then User clicks on Continue button to navigate to Home Page 
@@ -21,8 +22,7 @@ Scenario Outline: Home page default registration
 	And User clicks continue to confirm successfull order 
 	And User logs out
 	
-	Examples:
-	|FirstName|LastName |Email              |Password |ConfirmPass|
-	|tese7n0d0|ultimate3|tese7n0d0@gmail.com|tese7n0d0|tese7n0d0  |
-	|tesf0n0d7|final3   |tesf0n0d7@gmail.com|tesf0n0d7|tesf0n0d7  |
+<<<<<<< HEAD
+=======
 	
+>>>>>>> ec6545fb50a5b76008a270fec3f083bba3bc934c

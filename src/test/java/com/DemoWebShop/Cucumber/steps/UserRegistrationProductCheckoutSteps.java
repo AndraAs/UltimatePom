@@ -1,5 +1,9 @@
 package com.DemoWebShop.Cucumber.steps;
 
+import java.io.IOException;
+import java.util.ArrayList;
+
+import com.DemoWebShop.Cucumber.ExcelReader.DataDrivenReader;
 import com.DemoWebShop.Cucumber.steps.Serenity.DemoWebShopSteps;
 import com.github.javafaker.Faker;
 
@@ -15,14 +19,24 @@ import net.thucydides.core.annotations.Steps;
 public class UserRegistrationProductCheckoutSteps {
 	@Steps
 	DemoWebShopSteps shopper;
+//	DataDrivenReader reader;
 	@Given ("User navigates to registration page")
 	public void User_navigates_To_Registration_Page(){
 		shopper.registerUser();
 	}
 	
-	@And("^User fills in Registration Form with thse details (.+),(.+),(.+),(.+),(.+)$")
-	public void User_fills_in_Registration_Form(String FirstName, String LastName, String Email, String Password, String ConfirmPassw) {
+	@And("^User fills in Registration Form with thse details")
+	public void User_fills_in_Registration_Form() throws IOException {
+		
+		DataDrivenReader reader = new DataDrivenReader();	
+		ArrayList<String> data=reader.getData("NeededUrl");
+		     String FirstName=data.get(1);
+		     String LastName=data.get(2);
+		     String Email=data.get(3);
+		     String Password=data.get(4);
+		     String ConfirmPassw=data.get(5);
 	
+//			
 		shopper.fillRegisterForm(FirstName, LastName, Email, Password, ConfirmPassw);
 	}
 	

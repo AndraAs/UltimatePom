@@ -1,5 +1,6 @@
 package com.DemoWebShop.Cucumber.steps.Serenity;
 
+import com.DemoWebShop.Cucumber.ExcelReader.DataDrivenReader;
 import com.demoWebShop.pages.BasePageWebShop;
 import com.demoWebShop.pages.CheckOutPage;
 import com.demoWebShop.pages.ProductsPageWebShop;
@@ -17,6 +18,7 @@ public class DemoWebShopSteps extends ScenarioSteps {
 	RegisterPageDemoWebFields registerFields;
 	ShoppingCartPage shoppingCartPage;
 	CheckOutPage checkOutPage;
+	DataDrivenReader reader;
 
 //Registering new user
 	@Step("Register new user")
